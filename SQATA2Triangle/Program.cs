@@ -40,7 +40,7 @@ namespace SQATA2Triangle
             switch (optionCode)
             {
                 case 1:
-                    // call action
+                    ReadTriangleValues();
                     break;
                 default:
                     break;
@@ -87,6 +87,52 @@ namespace SQATA2Triangle
             while (!correct);
 
             return EXIT_CODE;
+        }
+
+        private static void ReadTriangleValues()
+        {
+            Console.WriteLine("Please, enter the first value for the triangle");
+            int firstValue = ReadValidInteger();
+
+            Console.WriteLine("Please, enter the second value for the triangle");
+            int secondValue = ReadValidInteger();
+
+            Console.WriteLine("Please, enter the third value for the triangle");
+            int thirdValue = ReadValidInteger();
+
+            Console.WriteLine($"Values: {firstValue}, {secondValue}, {thirdValue}");
+        }
+
+        /// <summary>
+        /// Auxiliary method to read a valid integer and handle exceptions
+        /// </summary>
+        /// <returns></returns>
+        private static int ReadValidInteger()
+        {
+            bool correct = false;
+            do
+            {
+                Console.Write("Value: ");
+                bool validInteger = int.TryParse(Console.ReadLine(), out int value);
+                if (validInteger)
+                {
+                    if (value <= 0)
+                    {
+                        Console.WriteLine("Please inform an integer greater than 0");
+                    }
+                    else
+                    {
+                        return value;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please inform a valid integer number");
+                }
+            }
+            while (!correct);
+
+            return 0;
         }
     }
 }
