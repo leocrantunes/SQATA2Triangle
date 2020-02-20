@@ -101,6 +101,7 @@ namespace SQATA2Triangle
             int thirdValue = ReadValidInteger();
 
             Console.WriteLine($"Values: {firstValue}, {secondValue}, {thirdValue}");
+            Console.WriteLine($"Analysis: {TriangleSolver.Analyze(firstValue, secondValue, thirdValue)}");
         }
 
         /// <summary>
