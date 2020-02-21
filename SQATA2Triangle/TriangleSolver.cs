@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SQATA2Triangle
+﻿namespace SQATA2Triangle
 {
     public static class TriangleSolver
     {
