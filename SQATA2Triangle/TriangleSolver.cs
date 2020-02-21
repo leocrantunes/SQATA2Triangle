@@ -3,7 +3,7 @@
     public static class TriangleSolver
     {
         public const string NOT_TRIANGLE = "Not a triangle";
-        public const string ISOSCELES = "Isosceles"; // scalene, isosceles, or equilateral
+        public const string ISOSCELES = "Isosceles";
         public const string SCALENE = "Scalene";
         public const string EQUILATERAL = "Equilateral";
 

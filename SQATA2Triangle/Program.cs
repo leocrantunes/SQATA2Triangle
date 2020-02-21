@@ -98,8 +98,16 @@ namespace SQATA2Triangle
             Console.WriteLine("Please, enter the third value for the triangle");
             int thirdValue = ReadValidInteger();
 
+            string result = TriangleSolver.Analyze(firstValue, secondValue, thirdValue);
+            bool isTriangle = result != TriangleSolver.NOT_TRIANGLE;
+            
             Console.WriteLine($"Values: {firstValue}, {secondValue}, {thirdValue}");
-            Console.WriteLine($"Analysis: {TriangleSolver.Analyze(firstValue, secondValue, thirdValue)}");
+            Console.WriteLine($"Is triangle: {(isTriangle ? "Yes" : "No")}");
+
+            if (isTriangle)
+            {
+                Console.WriteLine($"Analysis: {TriangleSolver.Analyze(firstValue, secondValue, thirdValue)}");
+            }
         }
 
         /// <summary>
