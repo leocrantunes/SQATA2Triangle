@@ -9,25 +9,29 @@
 
         public static string Analyze(int firstValue, int secondValue, int thirdValue)
         {
+            string result;
+
             if (IsValid(firstValue, secondValue, thirdValue))
             {
                 if (firstValue == secondValue && secondValue == thirdValue)
                 {
-                    return EQUILATERAL;
+                    result = EQUILATERAL;
                 }
                 else if (firstValue != secondValue && secondValue != thirdValue)
                 {
-                    return SCALENE;
+                    result = SCALENE;
                 }
                 else
                 {
-                    return ISOSCELES;
+                    result = ISOSCELES;
                 }
             }
             else
             {
-                return NOT_TRIANGLE;
+                result = NOT_TRIANGLE;
             }
+
+            return result;
         }
 
         private static bool IsValid(int firstValue, int secondValue, int thirdValue)
