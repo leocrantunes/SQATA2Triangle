@@ -38,9 +38,9 @@ namespace SQATA2Triangle
 
         private static bool IsValid(int firstValue, int secondValue, int thirdValue)
         {
-            return (firstValue + secondValue > thirdValue) &&
-                   (secondValue + thirdValue > firstValue) &&
-                   (firstValue + thirdValue > secondValue);
+            return ((long)firstValue + (long)secondValue > (long)thirdValue) &&
+                   ((long)secondValue + (long)thirdValue > (long)firstValue) &&
+                   ((long)firstValue + (long)thirdValue > (long)secondValue);
         }
     }
 }
